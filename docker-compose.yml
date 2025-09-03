@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  cssloop:
+    image: cssloop
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    hostname: cssloop
+    command: ["/app/cssloop"]
+    ports:
+      - "127.0.0.94:8626:8080"
